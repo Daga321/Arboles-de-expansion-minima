@@ -1,8 +1,6 @@
 package View;
 
 import java.awt.Color;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
@@ -16,6 +14,7 @@ import Control.Controller;
 public class OptionsPanel extends JPanel{
 	
 	private JButton btnClose;
+	private JButton btnReset;
 	
 	private JLabel txtVertex;
 	private JLabel txtVertexName;
@@ -42,18 +41,22 @@ public class OptionsPanel extends JPanel{
 	}
 	
 	private void initialize() {
+		btnReset = new JButton("Reset");
+		btnReset.setForeground(Color.RED);
+		btnReset.setBounds(0, 0, 80, 30);
+		
 		btnClose = new JButton("X");
 		btnClose.setForeground(Color.RED);
 		btnClose.setBounds(250, 0, 50, 30);
 		
 		txtVertex = new JLabel("Agregar un nuevo vertice");
-		txtVertex.setBounds(30, 30, 240, 30);
+		txtVertex.setBounds(30, 40, 240, 30);
 		
 		txtVertexName = new JLabel("Ingrese el nombre del vertice");
-		txtVertexName.setBounds(30, 60, 240, 30);
+		txtVertexName.setBounds(30, 70, 240, 30);
 		
 		tfVertexName = new JTextField();
-		tfVertexName.setBounds(30, 85, 240, 30);
+		tfVertexName.setBounds(30, 100, 240, 30);
 		
 		btnVertexName = new JButton("Agregar vertice");
 		btnVertexName.setBounds(30, 140, 240, 30);
@@ -95,6 +98,7 @@ public class OptionsPanel extends JPanel{
 	}
 	
 	private void assign() {
+		add(btnReset);
 		add(btnClose);
 		
 		add(txtVertex);
@@ -117,6 +121,9 @@ public class OptionsPanel extends JPanel{
 	}
 	
 	public void assignController(Controller controller) {
+		btnReset.setActionCommand(Actions.RESET);
+		btnReset.addActionListener(controller);
+		
 		btnClose.setActionCommand(Actions.CLOSE);
 		btnClose.addActionListener(controller);
 		

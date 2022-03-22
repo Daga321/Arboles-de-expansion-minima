@@ -61,10 +61,12 @@ public class Prim extends JPanel{
 		ArrayList<Graph<Vertex<String>, Edge>> graphMST = new ArrayList<Graph<Vertex<String>,Edge>>();
 		
 		Graphs mst = new Graphs();
-		mst.addVertex(graph.getVertex().get(0));
-		
-		//convertGraph(mst).getEdgeCount()+1<convertGraph(graph).getVertexCount()
+
 		try {
+			mst.addVertex(graph.getVertex().get(0));
+			
+			//convertGraph(mst).getEdgeCount()+1<convertGraph(graph).getVertexCount()
+			
 			while(convertGraph(mst).getVertexCount()<convertGraph(graph).getVertexCount()){
 				
 				//Find minimally weighted adjacent edge

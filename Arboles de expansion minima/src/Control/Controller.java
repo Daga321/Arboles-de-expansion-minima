@@ -24,6 +24,17 @@ public class Controller implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		switch (e.getActionCommand()){
 		
+			case Actions.RESET:
+				management.reset();
+				actions.showGraph(Actions.GRAPH, management.getGraph());//Mostrar grafo ROJO
+				actions.clear(Actions.VERTEX);
+				actions.clear(Actions.EDGE);
+				management.resetMST();
+				actions.showGraph(Actions.GRAPHMST, management.getGraphMST());//Msotar arbol MST VERDE
+				actions.show(Actions.ORIGIN, management.getVertex());
+				actions.show(Actions.DESTINY, management.getVertex());
+			break;
+		
 			case Actions.CLOSE:
 				System.exit(0);
 			break;

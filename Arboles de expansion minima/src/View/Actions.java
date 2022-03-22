@@ -7,6 +7,7 @@ import edu.uci.ics.jung.graph.Graph;
 public interface Actions {
 
 	public static final String CLOSE = "close";
+	public static final String RESET = "reset";
 	
 	public static final String VERTEX = "vertex";
 	public static final String EDGE = "edge";

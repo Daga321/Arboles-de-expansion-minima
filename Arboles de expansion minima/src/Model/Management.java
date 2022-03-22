@@ -31,6 +31,14 @@ public class Management{
 		resetMST();
 	}
 	
+	public void reset() {
+		vertexList = new ArrayList<Vertex<String>>();
+		edgeList = new ArrayList<Edge>();
+		graph = new SparseMultigraph<Vertex<String>,Edge>();
+		
+		resetMST();
+	}
+	
 	private void genesis() {
 		
 		// 24 sectores(Vertices)
@@ -127,8 +135,10 @@ public class Management{
 	}
 	
 	public void createEdge(String[] data) {
-		edgeList.add(new Edge(Integer.parseInt(data[1]), vertexList.get(Integer.parseInt(data[0])), vertexList.get(Integer.parseInt(data[2]))));
-		graph.addEdge(edgeList.get(edgeList.size()-1), edgeList.get(edgeList.size()-1).getVertex1(), edgeList.get(edgeList.size()-1).getVertex2());
+		try {
+			edgeList.add(new Edge(Integer.parseInt(data[1]), vertexList.get(Integer.parseInt(data[0])), vertexList.get(Integer.parseInt(data[2]))));
+			graph.addEdge(edgeList.get(edgeList.size()-1), edgeList.get(edgeList.size()-1).getVertex1(), edgeList.get(edgeList.size()-1).getVertex2());
+		} catch (Exception e) {}
 	}
 	
 	public void createVertex(String data) {
@@ -168,17 +178,19 @@ public class Management{
 
 	public Graph<Vertex<String>, Edge> getGraphMST() {
 		Graph<Vertex<String>, Edge> gMST = new DelegateForest<>();
-		Graph<Vertex<String>, Edge> graph = listMST.get(index);
-		System.out.println("Index::"+index);
-		Collection<Vertex<String>> vertexCollection = graph.getVertices();
-		for (Iterator<Vertex<String>> iterator = vertexCollection.iterator(); iterator.hasNext();) {
-			Vertex<String> vertex = (Vertex<String>) iterator.next();
-			gMST.addVertex(vertex);
-		}
-		Collection<Edge> edgeCollection = graph.getEdges();
-		for (Iterator<Edge> iterator = edgeCollection.iterator(); iterator.hasNext();) {
-			Edge edge = (Edge) iterator.next();
-			gMST.addEdge(edge, edge.getVertex1(), edge.getVertex2());
+		if (listMST.size()>0) {
+			Graph<Vertex<String>, Edge> graph = listMST.get(index);
+			System.out.println("Index::"+index);
+			Collection<Vertex<String>> vertexCollection = graph.getVertices();
+			for (Iterator<Vertex<String>> iterator = vertexCollection.iterator(); iterator.hasNext();) {
+				Vertex<String> vertex = (Vertex<String>) iterator.next();
+				gMST.addVertex(vertex);
+			}
+			Collection<Edge> edgeCollection = graph.getEdges();
+			for (Iterator<Edge> iterator = edgeCollection.iterator(); iterator.hasNext();) {
+				Edge edge = (Edge) iterator.next();
+				gMST.addEdge(edge, edge.getVertex1(), edge.getVertex2());
+			}
 		}
 		return gMST ;
 	}
