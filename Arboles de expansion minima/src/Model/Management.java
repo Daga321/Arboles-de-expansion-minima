@@ -205,6 +205,12 @@ public class Management{
 	public String getMSTData() {
 		String data = "ARBOL DE EXPANCION MINIMA:\n";
 		Graph<Vertex<String>, Edge> gMST = getGraphMST();
+//		Collection<Vertex<String>> c = gMST.getVertices();
+//		for (Iterator iterator = c.iterator(); iterator.hasNext();) {
+//			Vertex<String> vertex = (Vertex<String>) iterator.next();
+//			edu.uci.ics.jung.graph.event.GraphEvent.Vertex<V, E>
+//			vertex.
+//		}
 		data += "Iteracion: "+(index+1)+"\n";
 		data += "Numero de vertices: "+gMST.getVertexCount()+"\n";
 		data += "Numero de aristas: "+gMST.getEdgeCount();

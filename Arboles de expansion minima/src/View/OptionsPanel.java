@@ -148,14 +148,13 @@ public class OptionsPanel extends JPanel{
 		dimension.setSize(Actions.WIDTH*.1756, Actions.HEIGHT*.0976);//240, 75
 		lblLogo.setSize(dimension);
 		lblLogo.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.7291)));//30, 560
-//		url = OptionsPanel.class.getResource("Images/logoUPTC.png");
-//		ImageIcon imgIcon = new ImageIcon(url);
-//	    Image imgEscalada = imgIcon.getImage().getScaledInstance(lblLogo.getWidth(),lblLogo.getHeight(), Image.SCALE_SMOOTH);
-//	    Icon iconoEscalado = new ImageIcon(imgEscalada);
-//      lblLogo.setIcon(iconoEscalado);
+		url = OptionsPanel.class.getResource("/logoUPTC.png");
+		System.out.println(url);
+		ImageIcon imgIcon = new ImageIcon(url);
+	    Image imgEscalada = imgIcon.getImage().getScaledInstance(lblLogo.getWidth(),lblLogo.getHeight(), Image.SCALE_SMOOTH);
+	    Icon iconoEscalado = new ImageIcon(imgEscalada);
+	    lblLogo.setIcon(iconoEscalado);
 		
-		Image image = new ImageIcon("Images/logoUPTC.png").getImage();
-		lblLogo.setIcon(new ImageIcon(image.getScaledInstance(lblLogo.getWidth(), lblLogo.getHeight(), Image.SCALE_SMOOTH)));
 	}
 	
 	private void assign() {
