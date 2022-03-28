@@ -1,8 +1,15 @@
 package View;
 
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Image;
+import java.awt.Point;
+import java.net.URL;
+import java.util.Locale;
 
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -12,6 +19,10 @@ import javax.swing.JTextField;
 import Control.Controller;
 
 public class OptionsPanel extends JPanel{
+	private URL url;
+	private JLabel lblLogo;
+	
+	private Dimension dimension;
 	
 	private JButton btnClose;
 	private JButton btnReset;
@@ -41,60 +52,110 @@ public class OptionsPanel extends JPanel{
 	}
 	
 	private void initialize() {
+		dimension = new Dimension();
+		
 		btnReset = new JButton("Reset");
 		btnReset.setForeground(Color.RED);
-		btnReset.setBounds(0, 0, 80, 30);
+		dimension.setSize(Actions.WIDTH*.0585, Actions.HEIGHT*.039);//80, 30
+		btnReset.setSize(dimension);
+		btnReset.setLocation(new Point(0, 0));//0, 0
 		
 		btnClose = new JButton("X");
 		btnClose.setForeground(Color.RED);
-		btnClose.setBounds(250, 0, 50, 30);
+		dimension.setSize(Actions.WIDTH*.0373, Actions.HEIGHT*.039);//50, 30
+		btnClose.setSize(dimension);
+		btnClose.setLocation(new Point((int) (Actions.WIDTH*.183), 0));//250, 0
 		
 		txtVertex = new JLabel("Agregar un nuevo vertice");
-		txtVertex.setBounds(30, 40, 240, 30);
+		dimension.setSize(Actions.WIDTH*.1756, Actions.HEIGHT*.039);//240, 30
+		txtVertex.setSize(dimension);
+		txtVertex.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.052)));//30, 40
 		
 		txtVertexName = new JLabel("Ingrese el nombre del vertice");
-		txtVertexName.setBounds(30, 70, 240, 30);
+		dimension.setSize(Actions.WIDTH*.1756, Actions.HEIGHT*.039);//240, 30
+		txtVertexName.setSize(dimension);
+		txtVertexName.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.0911)));//30, 70
+		
 		
 		tfVertexName = new JTextField();
-		tfVertexName.setBounds(30, 100, 240, 30);
+		dimension.setSize(Actions.WIDTH*.1756, Actions.HEIGHT*.039);//240, 30
+		tfVertexName.setSize(dimension);
+		tfVertexName.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.1302)));//30, 100
 		
 		btnVertexName = new JButton("Agregar vertice");
-		btnVertexName.setBounds(30, 140, 240, 30);
+		dimension.setSize(Actions.WIDTH*.1756, Actions.HEIGHT*.039);//240, 30
+		btnVertexName.setSize(dimension);
+		btnVertexName.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.1822)));//30, 140
 		
 		txtEdge = new JLabel("Conectar 2 vertices mediante una arista");
-		txtEdge.setBounds(30, 170, 240, 30);
+		dimension.setSize(Actions.WIDTH*.1756, Actions.HEIGHT*.039);//240, 30
+		txtEdge.setSize(dimension);
+		txtEdge.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.2213)));//30, 170
 		
 		txtOriginVertex = new JLabel("Seleccione el vertice de origen");
-		txtOriginVertex.setBounds(30, 200, 240, 30);
+		dimension.setSize(Actions.WIDTH*.1756, Actions.HEIGHT*.039);//240, 30
+		txtOriginVertex.setSize(dimension);
+		txtOriginVertex.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.2604)));//30, 200
 		
 		cbOriginVertex = new JComboBox<>();
 		cbOriginVertex.setModel(new DefaultComboBoxModel());
-		cbOriginVertex.setBounds(30, 230, 240, 30);
+		dimension.setSize(Actions.WIDTH*.1756, Actions.HEIGHT*.039);//240, 30
+		cbOriginVertex.setSize(dimension);
+		cbOriginVertex.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.2994)));//30, 230
 		
 		txtWeight = new JLabel("Ingrese el peso de la arista");
-		txtWeight.setBounds(30, 260, 240, 30);
+		dimension.setSize(Actions.WIDTH*.1756, Actions.HEIGHT*.039);//240, 30
+		txtWeight.setSize(dimension);
+		txtWeight.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.3385)));//30, 260
 		
 		tfWeight = new JTextField();
-		tfWeight.setBounds(30, 290, 240, 30);
+		dimension.setSize(Actions.WIDTH*.1756, Actions.HEIGHT*.039);//240, 30
+		tfWeight.setSize(dimension);
+		tfWeight.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.3776)));//30, 290
 		
 		txtDestinyVertex = new JLabel("Seleccione el vertice de destino");
-		txtDestinyVertex.setBounds(30, 320, 240, 30);
+		dimension.setSize(Actions.WIDTH*.1756, Actions.HEIGHT*.039);//240, 30
+		txtDestinyVertex.setSize(dimension);
+		txtDestinyVertex.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.4166)));//30, 320
 		
 		cbDestinyVertex = new JComboBox<>();
 		cbOriginVertex.setModel(new DefaultComboBoxModel());
-		cbDestinyVertex.setBounds(30, 350, 240, 30);
+		dimension.setSize(Actions.WIDTH*.1756, Actions.HEIGHT*.039);//240, 30
+		cbDestinyVertex.setSize(dimension);
+		cbDestinyVertex.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.4557)));//30, 350
 		
 		btnEdge = new JButton("Agregar conexion mediante arista");
-		btnEdge.setBounds(30, 390, 240, 30);
+		dimension.setSize(Actions.WIDTH*.1756, Actions.HEIGHT*.039);//240, 30
+		btnEdge.setSize(dimension);
+		btnEdge.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.5078)));//30, 390
 		
 		txtMST = new JLabel("Arboles de expancion minima");
-		txtMST.setBounds(30, 440, 240, 30);
+		dimension.setSize(Actions.WIDTH*.1756, Actions.HEIGHT*.039);//240, 30
+		txtMST.setSize(dimension);
+		txtMST.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.5729)));//30, 440
 		
 		btnPreviousMST = new JButton("Paso anterior");
-		btnPreviousMST.setBounds(30, 470, 240, 30);
+		dimension.setSize(Actions.WIDTH*.1756, Actions.HEIGHT*.039);//240, 30
+		btnPreviousMST.setSize(dimension);
+		btnPreviousMST.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.6119)));//30, 470
 		
 		btnNextMST = new JButton("Siguiente paso");
-		btnNextMST.setBounds(30, 510, 240, 30);
+		dimension.setSize(Actions.WIDTH*.1756, Actions.HEIGHT*.039);//240, 30
+		btnNextMST.setSize(dimension);
+		btnNextMST.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.664)));//30, 510
+		
+		lblLogo = new JLabel();
+		dimension.setSize(Actions.WIDTH*.1756, Actions.HEIGHT*.0976);//240, 75
+		lblLogo.setSize(dimension);
+		lblLogo.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.7291)));//30, 560
+//		url = OptionsPanel.class.getResource("Images/logoUPTC.png");
+//		ImageIcon imgIcon = new ImageIcon(url);
+//	    Image imgEscalada = imgIcon.getImage().getScaledInstance(lblLogo.getWidth(),lblLogo.getHeight(), Image.SCALE_SMOOTH);
+//	    Icon iconoEscalado = new ImageIcon(imgEscalada);
+//      lblLogo.setIcon(iconoEscalado);
+		
+		Image image = new ImageIcon("Images/logoUPTC.png").getImage();
+		lblLogo.setIcon(new ImageIcon(image.getScaledInstance(lblLogo.getWidth(), lblLogo.getHeight(), Image.SCALE_SMOOTH)));
 	}
 	
 	private void assign() {
@@ -118,6 +179,8 @@ public class OptionsPanel extends JPanel{
 		add(txtMST);
 		add(btnPreviousMST);
 		add(btnNextMST);
+		
+		add(lblLogo);
 	}
 	
 	public void assignController(Controller controller) {

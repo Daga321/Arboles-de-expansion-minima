@@ -15,9 +15,11 @@ public class Controller implements ActionListener{
 		this.actions = actions;
 		management = new Management();
 		actions.showGraph(Actions.GRAPH, management.getGraph());//Mostrar grafo ROJO
-		actions.showGraph(Actions.GRAPHMST, management.getGraphMST());//Msotar arbol MST VERDE
+		actions.showGraph(Actions.GRAPHMST, management.getGraphMST());//Mostar arbol MST VERDE
 		actions.show(Actions.ORIGIN, management.getVertex());
 		actions.show(Actions.DESTINY, management.getVertex());
+		actions.showData(Actions.GRAPH, management.getGraphData());//Datos grafos
+		actions.showData(Actions.GRAPHMST, management.getMSTData());//Datos arboles
 	}
 
 	@Override
@@ -33,6 +35,8 @@ public class Controller implements ActionListener{
 				actions.showGraph(Actions.GRAPHMST, management.getGraphMST());//Msotar arbol MST VERDE
 				actions.show(Actions.ORIGIN, management.getVertex());
 				actions.show(Actions.DESTINY, management.getVertex());
+				actions.showData(Actions.GRAPH, management.getGraphData());//Datos grafos
+				actions.showData(Actions.GRAPHMST, management.getMSTData());//Datos arboles
 			break;
 		
 			case Actions.CLOSE:
@@ -47,6 +51,8 @@ public class Controller implements ActionListener{
 				actions.showGraph(Actions.GRAPHMST, management.getGraphMST());//Msotar arbol MST VERDE
 				actions.show(Actions.ORIGIN, management.getVertex());
 				actions.show(Actions.DESTINY, management.getVertex());
+				actions.showData(Actions.GRAPH, management.getGraphData());//Datos grafos
+				actions.showData(Actions.GRAPHMST, management.getMSTData());//Datos arboles
 			break;
 			
 			case Actions.EDGE: 
@@ -55,16 +61,22 @@ public class Controller implements ActionListener{
 				actions.clear(Actions.EDGE);
 				management.resetMST();
 				actions.showGraph(Actions.GRAPHMST, management.getGraphMST());//Msotar arbol MST VERDE
+				actions.showData(Actions.GRAPH, management.getGraphData());//Datos grafos
+				actions.showData(Actions.GRAPHMST, management.getMSTData());//Datos arboles
 			break;
 			
 			case Actions.PREVIOUS: 
 				management.previousIndex();
 				actions.showGraph(Actions.GRAPHMST, management.getGraphMST());//Msotar arbol MST VERDE
+				actions.showData(Actions.GRAPH, management.getGraphData());//Datos grafos
+				actions.showData(Actions.GRAPHMST, management.getMSTData());//Datos arboles
 			break;
 				
 			case Actions.NEXT: 
 				management.nextIndex();
 				actions.showGraph(Actions.GRAPHMST, management.getGraphMST());//Msotar arbol MST VERDE
+				actions.showData(Actions.GRAPH, management.getGraphData());//Datos grafos
+				actions.showData(Actions.GRAPHMST, management.getMSTData());//Datos arboles
 			break;
 		}
 		

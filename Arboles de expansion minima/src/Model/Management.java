@@ -194,4 +194,21 @@ public class Management{
 		}
 		return gMST ;
 	}
+	
+	public String getGraphData() {
+		String data = "GRAFO:\n";
+		data += "Numero de vertices: "+graph.getVertexCount()+"\n";
+		data += "Numero de aristas: "+graph.getEdgeCount();
+		return data;
+	}
+	
+	public String getMSTData() {
+		String data = "ARBOL DE EXPANCION MINIMA:\n";
+		Graph<Vertex<String>, Edge> gMST = getGraphMST();
+		data += "Iteracion: "+(index+1)+"\n";
+		data += "Numero de vertices: "+gMST.getVertexCount()+"\n";
+		data += "Numero de aristas: "+gMST.getEdgeCount();
+		return data;
+	}
+	
 }

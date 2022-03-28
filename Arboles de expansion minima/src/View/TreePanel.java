@@ -11,14 +11,10 @@ import org.apache.commons.collections15.Transformer;
 import Graph.Edge;
 import Graph.Vertex;
 
-import edu.uci.ics.jung.algorithms.layout.CircleLayout;
 import edu.uci.ics.jung.algorithms.layout.Layout;
 import edu.uci.ics.jung.algorithms.layout.TreeLayout;
-import edu.uci.ics.jung.graph.DelegateForest;
-import edu.uci.ics.jung.graph.DelegateTree;
 import edu.uci.ics.jung.graph.Forest;
 import edu.uci.ics.jung.graph.Graph;
-import edu.uci.ics.jung.graph.SparseMultigraph;
 import edu.uci.ics.jung.visualization.VisualizationViewer;
 import edu.uci.ics.jung.visualization.control.DefaultModalGraphMouse;
 import edu.uci.ics.jung.visualization.control.ModalGraphMouse;
@@ -34,6 +30,8 @@ public class TreePanel extends JPanel{
 	private Graph<Vertex<String>, Edge> graph;
 	private Color color;
 	
+	private Dimension dimension;
+	
 	public TreePanel(Graph<Vertex<String>, Edge> graph, Color color) {
 		this.color = color;
 		this.graph = graph;
@@ -43,12 +41,15 @@ public class TreePanel extends JPanel{
 	}
 	
 	private void initialice() {
+		dimension = new Dimension();
+		
 		//Initialize visualization
 		layout =  new TreeLayout<Vertex<String>, Edge>((Forest<Vertex<String>, Edge>) graph);
 		//crea margen Por niveles para asi poder asignar los nodos a la altura a la que pertenece 
 //		layout.setSize(new Dimension(500,600));//El layout se establece automaticamente en funcion del tamaño del arbol
         vs = new VisualizationViewer<Vertex<String>, Edge>(layout);//componente que detecta la interaccion con el mouse
-        vs.setPreferredSize(new Dimension(490,550));//tamaño del "panel" (el area visual)
+        dimension.setSize(Actions.WIDTH*.3587,Actions.HEIGHT*.6640);//490, 410
+        vs.setPreferredSize(dimension);//tamaño del "panel" (el area visual)
         
         //Creates GraphMouse and adds to visualization
         gm = new DefaultModalGraphMouse();//Permite el escalado del grafo a medida que este se vea editado
