@@ -7,22 +7,22 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/eclipse/eclipse/librerias/JUNG/collections-generic-4.01.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse/eclipse/librerias/JUNG/colt-1.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse/eclipse/librerias/JUNG/concurrent-1.3.4.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse/eclipse/librerias/JUNG/j3d-core-1.3.1.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse/eclipse/librerias/JUNG/jung-3d-2.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse/eclipse/librerias/JUNG/jung-3d-demos-2.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse/eclipse/librerias/JUNG/jung-algorithms-2.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse/eclipse/librerias/JUNG/jung-api-2.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse/eclipse/librerias/JUNG/jung-graph-impl-2.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse/eclipse/librerias/JUNG/jung-io-2.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse/eclipse/librerias/JUNG/jung-jai-2.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse/eclipse/librerias/JUNG/jung-jai-samples-2.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse/eclipse/librerias/JUNG/jung-samples-2.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse/eclipse/librerias/JUNG/jung-visualization-2.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse/eclipse/librerias/JUNG/stax-api-1.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse/eclipse/librerias/JUNG/vecmath-1.3.1.jar"/>
-	<classpathentry kind="lib" path="D:/eclipse/eclipse/librerias/JUNG/wstx-asl-3.2.6.jar"/>
+	<classpathentry kind="lib" path="D:/DAGA/Eclipse projects/Arboles de expansion minima MST/Arboles-de-expansion-minimo/Arboles de expansion minima/JUNG libraries/collections-generic-4.01.jar"/>
+	<classpathentry kind="lib" path="D:/DAGA/Eclipse projects/Arboles de expansion minima MST/Arboles-de-expansion-minimo/Arboles de expansion minima/JUNG libraries/colt-1.2.0.jar"/>
+	<classpathentry kind="lib" path="D:/DAGA/Eclipse projects/Arboles de expansion minima MST/Arboles-de-expansion-minimo/Arboles de expansion minima/JUNG libraries/concurrent-1.3.4.jar"/>
+	<classpathentry kind="lib" path="D:/DAGA/Eclipse projects/Arboles de expansion minima MST/Arboles-de-expansion-minimo/Arboles de expansion minima/JUNG libraries/j3d-core-1.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/DAGA/Eclipse projects/Arboles de expansion minima MST/Arboles-de-expansion-minimo/Arboles de expansion minima/JUNG libraries/jung-3d-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/DAGA/Eclipse projects/Arboles de expansion minima MST/Arboles-de-expansion-minimo/Arboles de expansion minima/JUNG libraries/jung-3d-demos-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/DAGA/Eclipse projects/Arboles de expansion minima MST/Arboles-de-expansion-minimo/Arboles de expansion minima/JUNG libraries/jung-algorithms-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/DAGA/Eclipse projects/Arboles de expansion minima MST/Arboles-de-expansion-minimo/Arboles de expansion minima/JUNG libraries/jung-api-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/DAGA/Eclipse projects/Arboles de expansion minima MST/Arboles-de-expansion-minimo/Arboles de expansion minima/JUNG libraries/jung-graph-impl-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/DAGA/Eclipse projects/Arboles de expansion minima MST/Arboles-de-expansion-minimo/Arboles de expansion minima/JUNG libraries/jung-io-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/DAGA/Eclipse projects/Arboles de expansion minima MST/Arboles-de-expansion-minimo/Arboles de expansion minima/JUNG libraries/jung-jai-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/DAGA/Eclipse projects/Arboles de expansion minima MST/Arboles-de-expansion-minimo/Arboles de expansion minima/JUNG libraries/jung-jai-samples-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/DAGA/Eclipse projects/Arboles de expansion minima MST/Arboles-de-expansion-minimo/Arboles de expansion minima/JUNG libraries/jung-samples-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/DAGA/Eclipse projects/Arboles de expansion minima MST/Arboles-de-expansion-minimo/Arboles de expansion minima/JUNG libraries/jung-visualization-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/DAGA/Eclipse projects/Arboles de expansion minima MST/Arboles-de-expansion-minimo/Arboles de expansion minima/JUNG libraries/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/DAGA/Eclipse projects/Arboles de expansion minima MST/Arboles-de-expansion-minimo/Arboles de expansion minima/JUNG libraries/vecmath-1.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/DAGA/Eclipse projects/Arboles de expansion minima MST/Arboles-de-expansion-minimo/Arboles de expansion minima/JUNG libraries/wstx-asl-3.2.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
