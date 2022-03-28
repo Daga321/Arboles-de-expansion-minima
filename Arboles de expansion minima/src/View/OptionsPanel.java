@@ -149,7 +149,6 @@ public class OptionsPanel extends JPanel{
 		lblLogo.setSize(dimension);
 		lblLogo.setLocation(new Point((int) (Actions.WIDTH*.0219), (int) (Actions.HEIGHT*.7291)));//30, 560
 		url = OptionsPanel.class.getResource("/logoUPTC.png");
-		System.out.println(url);
 		ImageIcon imgIcon = new ImageIcon(url);
 	    Image imgEscalada = imgIcon.getImage().getScaledInstance(lblLogo.getWidth(),lblLogo.getHeight(), Image.SCALE_SMOOTH);
 	    Icon iconoEscalado = new ImageIcon(imgEscalada);

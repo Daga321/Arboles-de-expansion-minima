@@ -176,8 +176,8 @@ public class Management{
 		}
 	}
 
-	public Graph<Vertex<String>, Edge> getGraphMST() {
-		Graph<Vertex<String>, Edge> gMST = new DelegateForest<>();
+	public DelegateForest<Vertex<String>, Edge> getGraphMST() {
+		DelegateForest<Vertex<String>, Edge> gMST = new DelegateForest<>();
 		if (listMST.size()>0) {
 			Graph<Vertex<String>, Edge> graph = listMST.get(index);
 			System.out.println("Index::"+index);
@@ -197,23 +197,55 @@ public class Management{
 	
 	public String getGraphData() {
 		String data = "GRAFO:\n";
+		data += "Numero de aristas: "+graph.getEdgeCount()+"\n";
+		Collection<Edge> collctionEdge = graph.getEdges();
+		int min = 99999999;
+		int max = 0;
+		int total = 0;
+		for (Iterator iterator = collctionEdge.iterator(); iterator.hasNext();) {
+			Edge edge = (Edge) iterator.next();
+			total += edge.getWeight();
+			if (edge.getWeight()<min) {
+				min = edge.getWeight();
+			}
+			if (edge.getWeight()>max) {
+				max = edge.getWeight();
+			}
+		}
+		data += "-Peso menor en arista: "+min+"\n";
+		data += "-Peso mayor en arista: "+max+"\n";
+		data += "-Peso total en aristas: "+total+"\n";
 		data += "Numero de vertices: "+graph.getVertexCount()+"\n";
-		data += "Numero de aristas: "+graph.getEdgeCount();
+		Collection<Vertex<String>> collectionVertex = graph.getVertices();
+		for (Iterator<Vertex<String>> iterator = collectionVertex.iterator(); iterator.hasNext();) {
+			Vertex<String> vertex = (Vertex<String>) iterator.next();
+			data += "-"+vertex.getInfo()+"\n";
+		}
+		
 		return data;
 	}
 	
 	public String getMSTData() {
 		String data = "ARBOL DE EXPANCION MINIMA:\n";
-		Graph<Vertex<String>, Edge> gMST = getGraphMST();
-//		Collection<Vertex<String>> c = gMST.getVertices();
-//		for (Iterator iterator = c.iterator(); iterator.hasNext();) {
-//			Vertex<String> vertex = (Vertex<String>) iterator.next();
-//			edu.uci.ics.jung.graph.event.GraphEvent.Vertex<V, E>
-//			vertex.
-//		}
+		DelegateForest<Vertex<String>, Edge> gMST = getGraphMST();
 		data += "Iteracion: "+(index+1)+"\n";
+		data += "Numero de aristas: "+gMST.getEdgeCount()+"\n";
+		data += "Vertice raiz: "+vertexList.get(0)+"\n";
+		data += "Altura del arbol: "+gMST.getHeight()+"\n";
+//		int weight = 0;
+//		Collection<Vertex<String>> collection1 = gMST.getChildren(gMST.getRoot());
+//		for (Iterator<Vertex<String>> iterator = collection1.iterator(); iterator.hasNext();) {
+//			Vertex<String> vertex = (Vertex<String>) iterator.next();
+//			if (weight<gMST.getDepth(vertex)) {
+//				weight = gMST.getDepth(vertex);
+//			}
+//		}
 		data += "Numero de vertices: "+gMST.getVertexCount()+"\n";
-		data += "Numero de aristas: "+gMST.getEdgeCount();
+		Collection<Vertex<String>> collection2 = gMST.getVertices();
+		for (Iterator<Vertex<String>> iterator = collection2.iterator(); iterator.hasNext();) {
+			Vertex<String> vertex = (Vertex<String>) iterator.next();
+			data += "-"+vertex.getInfo()+"\n";
+		}
 		return data;
 	}
 	

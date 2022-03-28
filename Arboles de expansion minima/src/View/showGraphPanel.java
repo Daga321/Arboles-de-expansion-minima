@@ -57,7 +57,7 @@ public class showGraphPanel extends JDialog implements Actions{
 		taData = new JTextArea();
 		taData.setEditable(false);
 		spPanel = new JScrollPane(taData);
-		dimension.setSize(Actions.WIDTH*.366, Actions.HEIGHT*.3125);//500, 240
+		dimension.setSize(Actions.WIDTH*.366, Actions.HEIGHT*.1849);//500, 142
 		spPanel.setSize(dimension);
 		spPanel.setLocation(new Point(0, (int) (Actions.HEIGHT*.6783)));//0, 521
 		
