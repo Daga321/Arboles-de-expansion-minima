@@ -67,7 +67,7 @@ public class showOptionsPanel extends JDialog implements Actions{
 
 	@Override
 	public void show(String section, String[] data) {
-		System.out.println(section);
+//		System.out.println(section);
 		switch(section) {
 			case Actions.ORIGIN:
 				opOptions.fillcbOriginVertex(data);

@@ -10,8 +10,8 @@ public class Runner {
 	public static void main(String[] args) {
 		
 		Toolkit t = Toolkit.getDefaultToolkit();
-		System.out.println(t.getScreenSize().width);
-		System.out.println(t.getScreenSize().height);
+//		System.out.println(t.getScreenSize().width);
+//		System.out.println(t.getScreenSize().height);
 		
 		PrincipalWindow principalWindow = new PrincipalWindow();
 		Controller controller = new Controller(principalWindow);

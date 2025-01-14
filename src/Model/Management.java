@@ -180,7 +180,7 @@ public class Management{
 		DelegateForest<Vertex<String>, Edge> gMST = new DelegateForest<>();
 		if (listMST.size()>0) {
 			Graph<Vertex<String>, Edge> graph = listMST.get(index);
-			System.out.println("Index::"+index);
+//			System.out.println("Index::"+index);
 			Collection<Vertex<String>> vertexCollection = graph.getVertices();
 			for (Iterator<Vertex<String>> iterator = vertexCollection.iterator(); iterator.hasNext();) {
 				Vertex<String> vertex = (Vertex<String>) iterator.next();
