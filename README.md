@@ -7,8 +7,8 @@
 4. [Installation and Usage](#installation-and-usage)
 5. [Example Usage](#example-usage)
 6. [Images](#images)
-   - [Transformation Example](#transformation-example)
-   - [System Interface](#system-interface)
+   - [Graph to Minimum Spanning Tree (MST)](#graph-to-minimum-spanning-tree-mst)
+   - [System Interface](#application-user-interface)
 7. [Credits and Acknowledgments](#credits-and-acknowledgments)
 8. [License](#license)
 
